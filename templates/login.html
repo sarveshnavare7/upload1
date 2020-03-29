@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Login</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/nivo-slider/css/nivo-slider.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/venobox/venobox.css' %}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+                
+
+  <style>
+
+    .login{
+        position:absolute;
+        background-color:white;
+        color: black;
+        bottom:80px;
+        right:450px;
+        width:600px;
+        padding-left:160px;
+        padding-right:60px;
+        padding-top:40px;
+        padding-bottom:60px;
+        opacity: 0.8;
+        border-radius: 15px;
+        box-shadow: 10px 10px 10px black;
+        
+    }
+
+    #loginimg{
+        width:20px;
+        height:20px;
+        padding:05px;
+        margin-bottom: -8px;
+    }
+
+  </style>
+
+  
+</head>
+
+
+<body>
+    <!--header-->
+    <header id="header" class="fixed-top">
+      <div class="container d-flex">
+  
+        <div class="logo mr-auto">
+          <h1 class="text-light"><a href="index.html"><span>GO</span>Corona</a></h1>
+        </div>
+  
+        <nav class="nav-menu d-none d-lg-block">
+          <ul>
+            <li class="active"><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#specialoffer">Special Offers</a></li>
+            <li class="drop-down"><a href="">Contact Us</a>
+              <ul>
+                <li><a href="#">Customer Support</a></li>
+                <li class="drop-down"><a href="#">Contact</a>
+                  <ul>
+                    <li><a href="#">Call:1800-090-087</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Message</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Feedback</a></li>
+                <li><a href="#">Complaint</a></li>
+              </ul>
+            </li>
+           
+            
+  
+          </ul>
+        </nav><!-- .nav-menu -->
+  
+      </div>
+    </header><!-- End Header -->
+
+    <div class="container">
+        
+        <div class="login">
+            <p style="text-align:center;color:salmon;font-size: 40px;font-family: 'Acme';" >LOGIN</p>
+            <form id="f1" method="POST" action="login">
+              {% csrf_token %}
+                <label for="username"></label>
+                <input type="text" id="username" name="username" placeholder="Username.."><br><br>
+                <label for="password"> </label>
+                <input type="password" id="password" name="password" placeholder="Password.."><br><br>
+                
+                <label>
+                   <input type="checkbox" checked="checked" name="remember" style="margin:10px;"> Remember me<br>
+                 </label><br>
+                 <button id="submit" type="submit">Login</button>
+            </form>
+            <div>
+              {% for message in messages%}
+              <h3></h3>{{message}}></h3>
+              {% endfor %}
+             </div>
+            
+        </div>
+        
+ 
+
+    
+  
+<!-- Vendor JS Files -->
+<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/vendor/jquery.easing/jquery.easing.min.js' %}"></script>
+<script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+<script src="{% static 'assets/vendor/appear/jquery.appear.js' %}"></script>
+<script src="{% static 'assets/vendor/knob/jquery.knob.js' %}"></script>
+<script src="{% static 'assets/vendor/parallax/parallax.js' %}"></script>
+<script src="{% static 'assets/vendor/wow/wow.min.js' %}"></script>
+<script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'assets/vendor/nivo-slider/js/jquery.nivo.slider.js' %}"></script>
+<script src="{% static 'assets/vendor/owl.carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'assets/vendor/venobox/venobox.min.js' %}"></script>
+
+<!-- Template Main JS File -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+
+
+
+
+
+</body>
+</html>
+  
